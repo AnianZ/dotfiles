@@ -1,0 +1,16 @@
+[user]
+	name = anianz
+	email = a.ziegler@cioplenu.de
+[core]
+	editor = vim
+	excludesfile = ~/.config/git/gitignore_global
+[push]
+	default = current
+[pull]
+	rebase = true
+[rebase]
+	autoSquash = true
+[alias]
+	fuckit = reset --hard
+	logt = log --graph --decorate --color=auto --oneline --all
+
