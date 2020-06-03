@@ -13,4 +13,9 @@
 [alias]
 	fuckit = reset --hard
 	logt = log --graph --decorate --color=auto --oneline --all
+	co = checkout
+	br = branch
+	ci = commit
+	st = status
+	last = log -1 HEAD
 
