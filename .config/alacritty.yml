@@ -1,0 +1,14 @@
+colors:
+  primary:
+    background: '#333333'
+    foreground: '#F2F2F2'
+
+font:
+  normal:
+    family: "BlexMono Nerd Font"
+  bold:
+    family: "BlexMono Nerd Font"
+  italic:
+    family: "BlexMono Nerd Font"
+  size: 12.0
+
