@@ -3,6 +3,8 @@ colors:
     background: '#333333'
     foreground: '#F2F2F2'
 
+draw_bold_text_with_bright_colors: true
+
 font:
   normal:
     family: "BlexMono Nerd Font"
