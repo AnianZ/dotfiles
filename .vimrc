@@ -6,13 +6,15 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
-
 " Syntax checking
 Plugin 'vim-syntastic/syntastic'
-
+" Git changes in a gutter on the left
+Plugin 'airblade/vim-gitgutter'
+" Simple statusline
+Plugin 'vim-airline/vim-airline'
 " Theme
 Plugin 'KeitaNakamura/neodark.vim'
-
+" Simple orgmode, not everything emacs can do
 Plugin 'jceb/vim-orgmode'
 " Needed for orgmode
 Plugin 'tpope/vim-speeddating'
@@ -34,9 +36,13 @@ augroup numbertoggle
 	autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
 augroup END
 
-
 packloadall
 silent! helptags ALL
+
+" Enable airline powerline
+let g:airline_powerline_fonts = 1
+" Show the buffers as a tabline at the top
+let g:airline#extensions#tabline#enabled = 1
 
 " Set auto indet for orgmode
 let g:org_indent = 1
