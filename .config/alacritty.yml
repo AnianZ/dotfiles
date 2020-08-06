@@ -1,7 +1,7 @@
 colors:
   primary:
-    background: '#333333'
-    foreground: '#F2F2F2'
+    background: '#303030'
+    foreground: '#c6c6c6'
 
 draw_bold_text_with_bright_colors: true
 
