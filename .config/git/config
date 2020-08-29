@@ -18,4 +18,5 @@
 	ci = commit
 	st = status
 	last = log -1 HEAD
+	wdiff = diff --word-diff=color 
 
