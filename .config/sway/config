@@ -8,6 +8,7 @@
 # - https://github.com/emersion/grim
 # - https://github.com/emersion/slurp
 # - https://github.com/ammen99/wf-recorder
+# - https://gitlab.com/chinstrap/gammastep
 
 ### Variables
 #
@@ -144,6 +145,7 @@ input * {
     # We just use 1-10 as the default.
     bindsym $mod+n workspace next
     bindsym $mod+p workspace prev
+    bindsym $mod+Tab workspace back_and_forth
 
 #
 # Layout stuff:
