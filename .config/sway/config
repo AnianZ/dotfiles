@@ -88,8 +88,17 @@ input * {
 
     # Mute speakers
     bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
+    # Increase volume
+    bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +10%
+    # Lower volume
+    bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -10%
     # Mute mic
     bindsym XF86AudioMicMute exec pactl set-source-mute @DEFAULT_SOURCE@ toggle
+
+    # Brightness up
+    bindsym XF86MonBrightnessUp exec brightnessctl set 10%+
+    # Brightness down
+    bindsym XF86MonBrightnessDown exec brightnessctl set 10%-
 
 #
 # Moving around:
