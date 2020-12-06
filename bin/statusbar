@@ -1,0 +1,23 @@
+#!/bin/sh
+
+while true
+do
+	time=$(date +"%a %Y-%m-%d %H:%M:%S")
+
+	bat0_cap=$(cat /sys/class/power_supply/BAT0/capacity)
+	bat1_cap=$(cat /sys/class/power_supply/BAT1/capacity)
+
+	bat=$(((bat0_cap+bat1_cap)/2))
+
+	if [ ! "$(cat /sys/class/power_supply/AC/online)" = "0" ]; then
+		bat="🔌${bat}%"
+	elif [ "${bat}" -lt 10 ]; then
+		bat="⚠️${bat}%"
+	else
+		bat="🔋${bat}%"
+	fi
+
+	printf "%s %s\n" "${time}" "${bat}"
+	sleep 1
+done
+
