@@ -36,6 +36,9 @@ augroup numbertoggle
 	autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
 augroup END
 
+set hlsearch    " highlight all search results
+set incsearch   " show incremental search results as you type
+
 packloadall
 silent! helptags ALL
 
