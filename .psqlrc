@@ -1,0 +1,13 @@
+-- Don't commit changes automatically
+\set AUTOCOMMIT off
+-- Only activate ON_ERROR_ROLLBACK in interactive mode
+\set ON_ERROR_ROLLBACK interactive
+-- Always use upper case
+\set COMP_KEYWORD_CASE upper
+-- Create a separate history file for each DB
+\set HISTFILE ~/.var/psql/history- :DBNAME
+
+-- Don't use a pager, tmux can handle that
+\pset pager off
+-- Actually show NULL as (null) instead of nothing
+\pset null '(null)'
