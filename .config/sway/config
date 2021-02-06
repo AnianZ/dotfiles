@@ -8,7 +8,8 @@
 # - https://github.com/emersion/grim
 # - https://github.com/emersion/slurp
 # - https://github.com/ammen99/wf-recorder
-# - https://gitlab.com/chinstrap/gammastep
+# - https://sr.ht/~kennylevinsen/wlsunset/
+# - https://github.com/emersion/kanshi
 
 exec /usr/libexec/kdeconnectd
 exec /usr/bin/kdeconnect-indicator
@@ -162,6 +163,9 @@ input * {
 #
 # Layout stuff:
 #
+    # Split vertical by default
+    default_orientation vertical
+
     # You can "split" the current object of your focus with
     # $mod+b or $mod+v, for horizontal and vertical splits
     # respectively.
@@ -276,6 +280,15 @@ bar {
         bindsym Escape exec pkill -SIGINT wf-recorder, mode "default"
     }
 
+#
+# Suset redshift
+#
+exec wlsunset -l 48.3 -L 10.9
+
+#
+# Output automation
+#
+exec kanshi
 
 #
 # Notifications
