@@ -15,7 +15,7 @@
 	logt = log --graph --decorate --color=auto --oneline --all
 	co = checkout
 	br = branch
-	ci = commit
+	c = commit
 	st = status
 	last = log -1 HEAD
 	wip = for-each-ref --sort='authordate:iso8601' --format=' %(color:green)%(authordate:relative)%09%(color:white)%(refname:short)' refs/heads
