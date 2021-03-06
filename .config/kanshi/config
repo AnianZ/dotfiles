@@ -10,3 +10,14 @@ profile dock {
 	exec swaymsg workspace browser output '"BenQ Corporation BenQ GL2450H 47D01188019"'
 	exec swaymsg workspace laptop output eDP-1
 }
+
+profile augsburg-office {
+	output eDP-1 position 0,0
+	output "Samsung Electric Company S27E450 H4ZGC00874" position 1920,0
+	exec swaymsg workspace 1, move workspace to output '"Samsung Electric Company S27E450 H4ZGC00874"'
+	exec swaymsg workspace 2, move workspace to output '"Samsung Electric Company S27E450 H4ZGC00874"'
+	exec swaymsg workspace 3, move workspace to output '"Samsung Electric Company S27E450 H4ZGC00874"'
+	exec swaymsg workspace 4, move workspace to output '"Samsung Electric Company S27E450 H4ZGC00874"'
+	exec swaymsg workspace 5, move workspace to output '"Samsung Electric Company S27E450 H4ZGC00874"'
+	exec swaymsg workspace laptop output eDP-1
+}
