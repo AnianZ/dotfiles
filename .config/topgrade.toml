@@ -1,9 +1,6 @@
 # Don't ask for confirmations
 assume_yes = true
 
-# Disable specific steps - same options as the command line flag
-disable = ["go"]
-
 # Cleanup temporary or old files
 cleanup = true
 
@@ -17,6 +14,5 @@ arguments = "--rebase --autostash"
 
 # Custom commands
 [commands]
-#"Python Environment" = "~/dev/.env/bin/pip install -i https://pypi.python.org/simple -U --upgrade-strategy eager jupyter"
 "aerc" = "cd ~/src/aerc && make && sudo make install"
 
