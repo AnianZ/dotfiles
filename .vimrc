@@ -90,3 +90,10 @@ colorscheme neodark
 let g:neodark#use_256color = 1
 
 autocmd Filetype markdown setlocal tw=100 ts=4 sw=4 sts=4
+autocmd FileType yaml setlocal et ts=2 sw=2
+autocmd FileType hcl setlocal et ts=2 sw=2
+autocmd BufRead,BufNewFile *.js setlocal et ts=2 sw=2
+autocmd BufRead,BufNewFile *.ts setlocal et ts=2 sw=2
+
+" Set fzf runtime
+set rtp+=/usr/local/opt/fzf
