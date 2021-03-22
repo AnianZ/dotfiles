@@ -21,3 +21,14 @@ profile augsburg-office {
 	exec swaymsg workspace 5, move workspace to output '"Samsung Electric Company S27E450 H4ZGC00874"'
 	exec swaymsg workspace laptop output eDP-1
 }
+
+profile tower {
+	output "Ancor Communications Inc VG248 FCLMQS112078" position 0,0
+	output "BenQ Corporation BenQ GL2450H 47D01188019" position 1920,0
+	exec swaymsg workspace 1, move workspace to output '"Ancor Communications Inc VG248 FCLMQS112078"'
+	exec swaymsg workspace 2, move workspace to output '"Ancor Communications Inc VG248 FCLMQS112078"'
+	exec swaymsg workspace 3, move workspace to output '"Ancor Communications Inc VG248 FCLMQS112078"'
+	exec swaymsg workspace 4, move workspace to output '"Ancor Communications Inc VG248 FCLMQS112078"'
+	exec swaymsg workspace 5, move workspace to output '"Ancor Communications Inc VG248 FCLMQS112078"'
+	exec swaymsg workspace browser output '"BenQ Corporation BenQ GL2450H 47D01188019"'
+}
