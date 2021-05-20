@@ -15,4 +15,5 @@ arguments = "--rebase --autostash"
 # Custom commands
 [commands]
 "aerc" = "cd ~/src/aerc && make && sudo make install"
+"dotfiles" = "cd ~ && git --git-dir=$HOME/.config/dotfiles --work-tree=$HOME pull --autostash" 
 
