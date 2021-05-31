@@ -7,7 +7,8 @@ cleanup = true
 [git]
 # Additional git repositories to pull
 repos = [
-	"~/src/aerc"
+	"~/src/aerc",
+	"~/.local/share/zsh-autosuggestions"
 ]
 # Arguments to pass Git when pulling Repositories
 arguments = "--rebase --autostash"
