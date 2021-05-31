@@ -19,6 +19,6 @@ font:
     family: "BlexMono Nerd Font"
   size: 11.0
 
-mouse:
+hints:
   url:
     modifiers: Control
