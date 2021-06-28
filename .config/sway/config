@@ -7,7 +7,9 @@
 # - https://github.com/emersion/mako
 # - https://github.com/emersion/grim
 # - https://github.com/emersion/slurp
+# - https://github.com/jtheoof/swappy
 # - https://github.com/ammen99/wf-recorder
+# - https://github.com/Hummer12007/brightnessctl
 # - https://sr.ht/~kennylevinsen/wlsunset/
 # - https://github.com/emersion/kanshi
 
@@ -40,7 +42,7 @@ gaps outer 3px
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg /usr/share/backgrounds/f26/default/standard/f26.png fill
+output * bg /usr/share/backgrounds/f33/default/f33.png fill
 
 ### Idle configuration
 # Inhibit idle when the view is fullscreen
@@ -270,6 +272,14 @@ bar {
     bindsym Alt+Shift+Print exec grim \
         -o $(swaymsg -t get_outputs | jq -r '.[] | select(.focused) | .name') - \
         | wl-copy
+    # Current output / screen with editing afterwards
+    bindsym $mod+Print exec grim \
+        -o $(swaymsg -t get_outputs | jq -r '.[] | select(.focused) | .name') - \
+        | swappy -f -
+    # Selection with editing afterwards
+    bindsym Ctrl+$mod+Print exec grim \
+        -g "$(slurp)" - \
+	| swappy -f -
 
 #
 # Screen recording
