@@ -25,6 +25,17 @@ setopt INC_APPEND_HISTORY_TIME  # append command to history file immediately aft
 setopt EXTENDED_HISTORY  # record command start time
 setopt SHARE_HISTORY # share history between zsh terminals
 
+# Completions for concourse fly CLI
+autoload -Uz compinit && compinit
+autoload -Uz bashcompinit && bashcompinit
+_fly_compl() {
+	args=("${COMP_WORDS[@]:1:$COMP_CWORD}")
+	local IFS=$'\n'
+	COMPREPLY=($(GO_FLAGS_COMPLETION=1 ${COMP_WORDS[0]} "${args[@]}"))
+	return 0
+}
+complete -F _fly_compl fly
+
 # PATH
 PATH="${HOME}/.cargo/bin:${HOME}/go/bin:${HOME}/.local/bin:${PATH}"; export PATH;
 
