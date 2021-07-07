@@ -70,3 +70,5 @@ alias dtfiles='git --git-dir=$HOME/.config/dotfiles --work-tree=$HOME'
 # Other helpful aliases
 alias dcp="sudo docker-compose"
 alias docker-compose="sudo docker-compose"
+# Find all git branches that have been merged and present them for deletion
+alias clean-git="git remote prune origin && git branch --merged >/tmp/merged-branches && vim /tmp/merged-branches && xargs git branch -d </tmp/merged-branches"
