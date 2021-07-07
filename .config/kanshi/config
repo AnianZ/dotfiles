@@ -32,3 +32,16 @@ profile tower {
 	exec swaymsg workspace 5, move workspace to output '"Ancor Communications Inc VG248 FCLMQS112078"'
 	exec swaymsg workspace browser output '"BenQ Corporation BenQ GL2450H 47D01188019"'
 }
+
+profile frankfurt-office {
+	output eDP-1 position 0,1080
+	output "ViewSonic Corporation VG2755 VJX193520225" position 0,0
+	exec swaymsg workspace 1, move workspace to output '"ViewSonic Corporation VG2755 VJX193520225"'
+	exec swaymsg workspace 2, move workspace to output '"ViewSonic Corporation VG2755 VJX193520225"'
+	exec swaymsg workspace 3, move workspace to output '"ViewSonic Corporation VG2755 VJX193520225"'
+	exec swaymsg workspace 4, move workspace to output '"ViewSonic Corporation VG2755 VJX193520225"'
+	exec swaymsg workspace 5, move workspace to output '"ViewSonic Corporation VG2755 VJX193520225"'
+	exec swaymsg workspace 6, move workspace to output '"ViewSonic Corporation VG2755 VJX193520225"'
+	exec swaymsg workspace 7 move workspace to output '"ViewSonic Corporation VG2755 VJX193520225"'
+	exec swaymsg workspace laptop output eDP-1
+}
