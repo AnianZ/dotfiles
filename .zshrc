@@ -42,6 +42,13 @@ PATH="${HOME}/.cargo/bin:${HOME}/go/bin:${HOME}/.local/bin:${PATH}"; export PATH
 # EDITOR
 export EDITOR=/usr/bin/vim
 
+# Launch gpg agent for SSH auth
+export GPG_TTY="$(tty)"
+export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
+gpgconf --launch gpg-agent
+gpg-connect-agent updatestartuptty /bye > /dev/null
+
+
 # the only way swearing really accomplishes anything
 eval $(thefuck --alias)
 
