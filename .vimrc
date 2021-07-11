@@ -89,6 +89,9 @@ colorscheme neodark
 " Use terminal background color
 let g:neodark#use_256color = 1
 
+" Set default spelling language
+set spelllang=en_GB
+
 autocmd Filetype markdown setlocal tw=100 ts=4 sw=4 sts=4
 autocmd FileType yaml setlocal et ts=2 sw=2
 autocmd FileType hcl setlocal et ts=2 sw=2
