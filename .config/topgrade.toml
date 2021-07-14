@@ -8,7 +8,8 @@ cleanup = true
 # Additional git repositories to pull
 repos = [
 	"~/src/aerc",
-	"~/.local/share/zsh-autosuggestions"
+	"~/.local/share/zsh-autosuggestions",
+	"~/src/swaylock-effects",
 ]
 # Arguments to pass Git when pulling Repositories
 arguments = "--rebase --autostash"
@@ -17,4 +18,5 @@ arguments = "--rebase --autostash"
 [commands]
 "aerc" = "cd ~/src/aerc && make && sudo make install"
 "dotfiles" = "cd ~ && git --git-dir=$HOME/.config/dotfiles --work-tree=$HOME pull --autostash" 
+"swaylock-effects" = "cd ~/src/swaylock-effects && meson build && ninja -C build && sudo ninja -C build install && sudo chmod a+s /usr/local/bin/swaylock"
 
