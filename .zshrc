@@ -25,6 +25,10 @@ setopt INC_APPEND_HISTORY_TIME  # append command to history file immediately aft
 setopt EXTENDED_HISTORY  # record command start time
 setopt SHARE_HISTORY # share history between zsh terminals
 
+# Cycle to the history of a command when using the arrow keys after the command has been typed
+bindkey "^[[A" up-line-or-search
+bindkey "^[[B" down-line-or-search
+
 # Completions for concourse fly CLI
 autoload -Uz compinit && compinit
 autoload -Uz bashcompinit && bashcompinit
