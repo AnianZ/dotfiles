@@ -264,6 +264,10 @@ bar {
     # Selection copied to clipboard
     bindsym Ctrl+Shift+Print exec grim -g "$(slurp)" - \
         | wl-copy
+    # Selection with editing afterwards
+    bindsym Ctrl+$mod+Print exec grim \
+        -g "$(slurp)" - \
+	| swappy -f -
     # Current output / screen saved to disk
     bindsym Alt+Print exec grim \
         -o $(swaymsg -t get_outputs | jq -r '.[] | select(.focused) | .name') \
@@ -276,21 +280,17 @@ bar {
     bindsym $mod+Print exec grim \
         -o $(swaymsg -t get_outputs | jq -r '.[] | select(.focused) | .name') - \
         | swappy -f -
-    # Selection with editing afterwards
-    bindsym Ctrl+$mod+Print exec grim \
-        -g "$(slurp)" - \
-	| swappy -f -
 
 #
 # Screen recording
 #
     # Selection
-    bindsym Ctrl+$mod+Shift+r exec wf-recorder \
+    bindsym Ctrl+$mod+r exec wf-recorder \
         -g "$(slurp)" \
         -f "$(xdg-user-dir VIDEOS)/$(date -Iseconds)_wf-rec.mp4", \
         mode recording
     # Current output / screen
-    bindsym Ctrl+$mod+r exec wf-recorder \
+    bindsym Alt+$mod+r exec wf-recorder \
         -o $(swaymsg -t get_outputs | jq -r '.[] | select(.focused) | .name') \
         -f "$(xdg-user-dir VIDEOS)/$(date -Iseconds)_wf-rec.mp4", \
         mode recording
