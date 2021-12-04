@@ -4,12 +4,9 @@ mrs=$(~/bin/mr-indicator.sh)
 
 while true
 do
-	time=$(date +"%a %Y-%m-%d %H:%M:%S")
+	time=$(date +"CW %V %a %Y-%m-%d %H:%M:%S")
 
-	bat0_cap=$(cat /sys/class/power_supply/BAT0/capacity)
-	bat1_cap=$(cat /sys/class/power_supply/BAT1/capacity)
-
-	bat=$(((bat0_cap+bat1_cap)/2))
+	bat=$(cat /sys/class/power_supply/BAT0/capacity)
 
 	if [ ! "$(cat /sys/class/power_supply/AC/online)" = "0" ]; then
 		bat="🔌${bat}%"
@@ -24,7 +21,11 @@ do
 		mrs=$(~/bin/mr-indicator.sh)
 	fi
 
-	printf "%s %s %s\n" "${time}" "${bat}" "${mrs}"
+	if [ $(( $(date +%s) % 30)) = 0 ]; then
+		ice="$(/home/anian/bin/ice-statusbar)"
+	fi
+
+	printf "%s %s %s %s\n" "${ice}" "${time}" "${bat}" "${mrs}"
 	sleep 1
 done
 
