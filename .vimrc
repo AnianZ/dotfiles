@@ -21,11 +21,6 @@ Plugin 'vim-airline/vim-airline'
 " Theme
 Plugin 'KeitaNakamura/neodark.vim'
 
-" Simple orgmode, not everything emacs can do
-Plugin 'jceb/vim-orgmode'
-" Needed for orgmode
-Plugin 'tpope/vim-speeddating'
-
 " Rainbow colors for csv
 Plugin 'mechatroner/rainbow_csv'
 " All you need for go in vim
@@ -41,6 +36,13 @@ Plugin 'jparise/vim-graphql'
 
 " Spell checking
 Plugin 'dpelle/vim-LanguageTool'
+
+" neovim orgmode plugins
+if has('nvim')
+	Plugin 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+	Plugin 'nvim-orgmode/orgmode'
+endif
+
 call vundle#end()            " required
 
 filetype plugin indent on    " required
@@ -95,8 +97,10 @@ set spelllang=en_GB
 autocmd Filetype markdown setlocal tw=100 ts=4 sw=4 sts=4
 autocmd FileType yaml setlocal et ts=2 sw=2
 autocmd FileType hcl setlocal et ts=2 sw=2
+autocmd BufNewFile,BufRead *.nomad set syntax=hcl et ts=2 sw=2
 autocmd BufRead,BufNewFile *.js setlocal et ts=2 sw=2
 autocmd BufRead,BufNewFile *.ts setlocal et ts=2 sw=2
 
 " Set fzf runtime
 set rtp+=/usr/local/opt/fzf
+
