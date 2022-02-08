@@ -44,7 +44,7 @@ complete -F _fly_compl fly
 PATH="${HOME}/.cargo/bin:${HOME}/go/bin:${HOME}/.local/bin:${PATH}"; export PATH;
 
 # EDITOR
-export EDITOR=/usr/bin/vim
+export EDITOR=/usr/bin/nvim
 
 # Launch gpg agent for SSH auth
 export GPG_TTY="$(tty)"
@@ -68,11 +68,18 @@ eval "$(direnv hook zsh)"
 # Starship promt
 eval "$(starship init zsh)"
 
+# Use the local podman socket for docker on fedora
+# https://fedoramagazine.org/use-docker-compose-with-podman-to-orchestrate-containers-on-fedora/
+export DOCKER_HOST=unix:/run/user/$UID/podman/podman.sock
+
 # Dotfile management
 alias dtfiles='git --git-dir=$HOME/.config/dotfiles --work-tree=$HOME'
 
 # Other helpful aliases
-alias dcp="sudo docker-compose"
-alias docker-compose="sudo docker-compose"
+alias vi="nvim"
+alias dcp="docker-compose"
 # Find all git branches that have been merged and present them for deletion
 alias clean-git="git remote prune origin && git branch --merged >/tmp/merged-branches && vim /tmp/merged-branches && xargs git branch -d </tmp/merged-branches"
+
+autoload -U +X bashcompinit && bashcompinit
+complete -o nospace -C /usr/local/bin/mcli mcli
