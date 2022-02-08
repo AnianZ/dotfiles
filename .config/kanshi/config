@@ -2,12 +2,11 @@ profile dock {
 	output eDP-1 position 0,0
 	output "Ancor Communications Inc VG248 FCLMQS112078" position 1920,0
 	output "BenQ Corporation BenQ GL2450H 47D01188019" position 3840,0
-	exec swaymsg workspace 1, move workspace to output '"Ancor Communications Inc VG248 FCLMQS112078"'
+	exec swaymsg workspace 1, move workspace to output '"BenQ Corporation BenQ GL2450H 47D01188019"'
 	exec swaymsg workspace 2, move workspace to output '"Ancor Communications Inc VG248 FCLMQS112078"'
 	exec swaymsg workspace 3, move workspace to output '"Ancor Communications Inc VG248 FCLMQS112078"'
 	exec swaymsg workspace 4, move workspace to output '"Ancor Communications Inc VG248 FCLMQS112078"'
 	exec swaymsg workspace 5, move workspace to output '"Ancor Communications Inc VG248 FCLMQS112078"'
-	exec swaymsg workspace browser output '"BenQ Corporation BenQ GL2450H 47D01188019"'
 	exec swaymsg workspace laptop output eDP-1
 }
 
@@ -19,6 +18,25 @@ profile augsburg-office {
 	exec swaymsg workspace 3, move workspace to output '"Samsung Electric Company S27E450 H4ZGC00874"'
 	exec swaymsg workspace 4, move workspace to output '"Samsung Electric Company S27E450 H4ZGC00874"'
 	exec swaymsg workspace 5, move workspace to output '"Samsung Electric Company S27E450 H4ZGC00874"'
+	exec swaymsg workspace 6, move workspace to output '"Samsung Electric Company S27E450 H4ZGC00874"'
+	exec swaymsg workspace 7, move workspace to output '"Samsung Electric Company S27E450 H4ZGC00874"'
+	exec swaymsg workspace 8, move workspace to output '"Samsung Electric Company S27E450 H4ZGC00874"'
+	exec swaymsg workspace 9, move workspace to output '"Samsung Electric Company S27E450 H4ZGC00874"'
+	exec swaymsg workspace laptop output eDP-1
+}
+
+profile severins-monitor {
+	output eDP-1 position 0,1440
+	output "Goldstar Company Ltd LG HDR 4K 0x0000EF41" position 0,0 scale 1.5
+	exec swaymsg workspace 1, move workspace to output '"Goldstar Company Ltd LG HDR 4K 0x0000EF41"'
+	exec swaymsg workspace 2, move workspace to output '"Goldstar Company Ltd LG HDR 4K 0x0000EF41"'
+	exec swaymsg workspace 3, move workspace to output '"Goldstar Company Ltd LG HDR 4K 0x0000EF41"'
+	exec swaymsg workspace 4, move workspace to output '"Goldstar Company Ltd LG HDR 4K 0x0000EF41"'
+	exec swaymsg workspace 5, move workspace to output '"Goldstar Company Ltd LG HDR 4K 0x0000EF41"'
+	exec swaymsg workspace 6, move workspace to output '"Goldstar Company Ltd LG HDR 4K 0x0000EF41"'
+	exec swaymsg workspace 7, move workspace to output '"Goldstar Company Ltd LG HDR 4K 0x0000EF41"'
+	exec swaymsg workspace 8, move workspace to output '"Goldstar Company Ltd LG HDR 4K 0x0000EF41"'
+	exec swaymsg workspace 9, move workspace to output '"Goldstar Company Ltd LG HDR 4K 0x0000EF41"'
 	exec swaymsg workspace laptop output eDP-1
 }
 
@@ -35,13 +53,13 @@ profile tower {
 
 profile frankfurt-office {
 	output eDP-1 position 0,1080
-	output "ViewSonic Corporation VG2755 VJX193520225" position 0,0
-	exec swaymsg workspace 1, move workspace to output '"ViewSonic Corporation VG2755 VJX193520225"'
-	exec swaymsg workspace 2, move workspace to output '"ViewSonic Corporation VG2755 VJX193520225"'
-	exec swaymsg workspace 3, move workspace to output '"ViewSonic Corporation VG2755 VJX193520225"'
-	exec swaymsg workspace 4, move workspace to output '"ViewSonic Corporation VG2755 VJX193520225"'
-	exec swaymsg workspace 5, move workspace to output '"ViewSonic Corporation VG2755 VJX193520225"'
-	exec swaymsg workspace 6, move workspace to output '"ViewSonic Corporation VG2755 VJX193520225"'
-	exec swaymsg workspace 7 move workspace to output '"ViewSonic Corporation VG2755 VJX193520225"'
+	output DP-1 position 0,0 scale 1
+	exec swaymsg workspace 1, move workspace to output DP-1
+	exec swaymsg workspace 2, move workspace to output DP-1
+	exec swaymsg workspace 3, move workspace to output DP-1
+	exec swaymsg workspace 4, move workspace to output DP-1
+	exec swaymsg workspace 5, move workspace to output DP-1
+	exec swaymsg workspace 6, move workspace to output DP-1
+	exec swaymsg workspace 7, move workspace to output DP-1
 	exec swaymsg workspace laptop output eDP-1
 }
