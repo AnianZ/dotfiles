@@ -27,5 +27,12 @@ require'nvim-treesitter.configs'.setup {
 require('orgmode').setup({
   org_agenda_files = {'~/sync/org/*'},
   org_default_notes_file = '~/sync/org/refile.org',
+  org_todo_keywords = {'TODO(t)', 'WAITING', '|', 'DONE(d)', 'DELEGATED(e)'},
+  org_hide_leading_stars = true,
+  org_hide_emphasis_markers = true,
+  org_agenda_templates =  {
+    t = { description = 'Task', template = '*** TODO %?\n    SCHEDULED: %t' },
+    j = { description = 'Journal', template = '** %?\n   %u' },
+  }
 })
 EOF
