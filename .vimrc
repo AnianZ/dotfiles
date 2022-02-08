@@ -51,6 +51,8 @@ set hidden " Don't abandon hidden buffers
 set encoding=utf-8
 set magic " unbreak vim's regex implementation
 
+set mouse=a " enable mouse features
+
 " Enable relative line numbers (hybrid)
 set number
 set relativenumber
