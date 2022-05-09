@@ -4,6 +4,8 @@ assume_yes = true
 # Cleanup temporary or old files
 cleanup = true
 
+disable = ["containers"]
+
 [git]
 # Additional git repositories to pull
 repos = [
