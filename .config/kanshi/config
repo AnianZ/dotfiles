@@ -53,16 +53,16 @@ profile tower {
 
 profile frankfurt-4k {
 	output eDP-1 position 0,1440
-	output "Dell Inc. DELL P2721Q 4JG58L3" position 0,0 scale 1.5 mode 3840x2160
-	exec swaymsg workspace 1, move workspace to output '"Dell Inc. DELL P2721Q 4JG58L3"'
-	exec swaymsg workspace 2, move workspace to output '"Dell Inc. DELL P2721Q 4JG58L3"'
-	exec swaymsg workspace 3, move workspace to output '"Dell Inc. DELL P2721Q 4JG58L3"'
-	exec swaymsg workspace 4, move workspace to output '"Dell Inc. DELL P2721Q 4JG58L3"'
-	exec swaymsg workspace 5, move workspace to output '"Dell Inc. DELL P2721Q 4JG58L3"'
-	exec swaymsg workspace 6, move workspace to output '"Dell Inc. DELL P2721Q 4JG58L3"'
-	exec swaymsg workspace 7, move workspace to output '"Dell Inc. DELL P2721Q 4JG58L3"'
-	exec swaymsg workspace 8, move workspace to output '"Dell Inc. DELL P2721Q 4JG58L3"'
-	exec swaymsg workspace 9, move workspace to output '"Dell Inc. DELL P2721Q 4JG58L3"'
+	output DP-2 position 0,0 scale 1.5 mode 3840x2160
+	exec swaymsg workspace 1, move workspace to output 'DP-2'
+	exec swaymsg workspace 2, move workspace to output 'DP-2'
+	exec swaymsg workspace 3, move workspace to output 'DP-2'
+	exec swaymsg workspace 4, move workspace to output 'DP-2'
+	exec swaymsg workspace 5, move workspace to output 'DP-2'
+	exec swaymsg workspace 6, move workspace to output 'DP-2'
+	exec swaymsg workspace 7, move workspace to output 'DP-2'
+	exec swaymsg workspace 8, move workspace to output 'DP-2'
+	exec swaymsg workspace 9, move workspace to output 'DP-2'
 	exec swaymsg workspace laptop output eDP-1
 }
 
@@ -96,13 +96,13 @@ profile frankfurt-office2 {
 
 profile cluj {
 	output eDP-1 position 0,1080
-	output "Unknown 24P1W1 GVEL5HA100689" position 0,0 scale 1
-	exec swaymsg workspace 1, move workspace to output '"Unknown 24P1W1 GVEL5HA100689"'
-	exec swaymsg workspace 2, move workspace to output '"Unknown 24P1W1 GVEL5HA100689"'
-	exec swaymsg workspace 3, move workspace to output '"Unknown 24P1W1 GVEL5HA100689"'
-	exec swaymsg workspace 4, move workspace to output '"Unknown 24P1W1 GVEL5HA100689"'
-	exec swaymsg workspace 5, move workspace to output '"Unknown 24P1W1 GVEL5HA100689"'
-	exec swaymsg workspace 6, move workspace to output '"Unknown 24P1W1 GVEL5HA100689"'
-	exec swaymsg workspace 7, move workspace to output '"Unknown 24P1W1 GVEL5HA100689"'
+	output HDMI-A-1 position 0,0 scale 1
+	exec swaymsg workspace 1, move workspace to output HDMI-A-1
+	exec swaymsg workspace 2, move workspace to output HDMI-A-1
+	exec swaymsg workspace 3, move workspace to output HDMI-A-1
+	exec swaymsg workspace 4, move workspace to output HDMI-A-1
+	exec swaymsg workspace 5, move workspace to output HDMI-A-1
+	exec swaymsg workspace 6, move workspace to output HDMI-A-1
+	exec swaymsg workspace 7, move workspace to output HDMI-A-1
 	exec swaymsg workspace laptop output eDP-2
 }
