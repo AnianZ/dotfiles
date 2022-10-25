@@ -13,4 +13,6 @@ separator-color=22222260
 inside-ver-color=0000001c
 ring-wrong-color=ff0000ff
 inside-wrong-color=ff0000aa
+fade-in=2
+grace=5
 
