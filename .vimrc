@@ -33,6 +33,9 @@ Plugin 'cespare/vim-toml'
 Plugin 'jvirtanen/vim-hcl'
 " Graphql support
 Plugin 'jparise/vim-graphql'
+" Hare support
+Plugin 'https://git.sr.ht/~sircmpwn/hare.vim'
+Plugin 'https://git.sr.ht/~torresjrjr/vim-haredoc'
 
 " Spell checking
 Plugin 'dpelle/vim-LanguageTool'
@@ -50,6 +53,7 @@ filetype plugin indent on    " required
 set hidden " Don't abandon hidden buffers
 set encoding=utf-8
 set magic " unbreak vim's regex implementation
+set sc " show commands while typing them 
 
 set mouse=a " enable mouse features
 
