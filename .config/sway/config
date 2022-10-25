@@ -13,9 +13,6 @@
 # - https://sr.ht/~kennylevinsen/wlsunset/
 # - https://github.com/emersion/kanshi
 
-exec /usr/libexec/kdeconnectd
-exec /usr/bin/kdeconnect-indicator
-
 ### Variables
 #
 # Logo key. Use Mod1 for Alt.
@@ -38,11 +35,6 @@ set $menu fuzzel -b 303030ff -t c6c6c6ff
 default_border pixel 3
 gaps inner 3px
 gaps outer 3px
-
-### Output configuration
-#
-# Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg /usr/share/backgrounds/f33/default/f33.png fill
 
 ### Idle configuration
 # Inhibit idle when the view is fullscreen
@@ -253,6 +245,11 @@ bar {
         background #323232
     }
 }
+
+#
+# Background image
+#
+exec "$HOME/bin/random_wallpaper.sh"
 
 #
 # Screenshots
