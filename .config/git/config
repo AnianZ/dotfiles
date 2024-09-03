@@ -1,6 +1,7 @@
 [user]
 	name = anianz
 	email = a.ziegler@cioplenu.de
+	signingkey = /home/anian/.ssh/id_rsa.pub
 [core]
 	editor = vim
 	excludesfile = ~/.config/git/gitignore_global
@@ -22,3 +23,7 @@
 	pl = pull --autostash
 	ps = push -u
 
+[gpg]
+	format = ssh
+[commit]
+	gpgsign = true
