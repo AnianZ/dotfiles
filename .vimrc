@@ -35,7 +35,6 @@ Plugin 'jvirtanen/vim-hcl'
 Plugin 'jparise/vim-graphql'
 " Hare support
 Plugin 'https://git.sr.ht/~sircmpwn/hare.vim'
-Plugin 'https://git.sr.ht/~torresjrjr/vim-haredoc'
 
 " Spell checking
 Plugin 'dpelle/vim-LanguageTool'
@@ -106,6 +105,7 @@ autocmd FileType hcl setlocal et ts=2 sw=2
 autocmd BufNewFile,BufRead *.nomad set syntax=hcl et ts=2 sw=2
 autocmd BufRead,BufNewFile *.js setlocal et ts=2 sw=2
 autocmd BufRead,BufNewFile *.ts setlocal et ts=2 sw=2
+autocmd BufRead,BufNewFile Jenkinsfile set filetype=groovy
 
 " Set fzf runtime
 set rtp+=/usr/local/opt/fzf
