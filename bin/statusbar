@@ -10,7 +10,9 @@ do
 
 	if [ ! "$(cat /sys/class/power_supply/AC/online)" = "0" ]; then
 		bat="🔌${bat}%"
-	elif [ "${bat}" -lt 10 ]; then
+	elif [ "${bat}" -lt 8 ]; then
+		bat="🚨🚨🚨${bat}%🚨🚨🚨"
+	elif [ "${bat}" -lt 15 ]; then
 		bat="⚠️${bat}%"
 	else
 		bat="🔋${bat}%"
