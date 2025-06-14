@@ -77,7 +77,10 @@ alias dtfiles='git --git-dir=$HOME/.config/dotfiles --work-tree=$HOME'
 
 # Other helpful aliases
 alias vi="nvim"
-alias dcp="docker-compose"
+alias dcp="podman-compose"
+# Switch between dark and light mode
+alias lettherebelight="gsettings set org.gnome.desktop.interface color-scheme prefer-light"
+alias notsobright="gsettings set org.gnome.desktop.interface color-scheme prefer-dark"
 # Find all git branches that have been merged and present them for deletion
 alias clean-git="git remote prune origin && git branch --merged >/tmp/merged-branches && vim /tmp/merged-branches && xargs git branch -d </tmp/merged-branches"
 
