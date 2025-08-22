@@ -29,29 +29,11 @@ setopt SHARE_HISTORY # share history between zsh terminals
 bindkey "^[[A" up-line-or-search
 bindkey "^[[B" down-line-or-search
 
-# Completions for concourse fly CLI
-autoload -Uz compinit && compinit
-autoload -Uz bashcompinit && bashcompinit
-_fly_compl() {
-	args=("${COMP_WORDS[@]:1:$COMP_CWORD}")
-	local IFS=$'\n'
-	COMPREPLY=($(GO_FLAGS_COMPLETION=1 ${COMP_WORDS[0]} "${args[@]}"))
-	return 0
-}
-complete -F _fly_compl fly
-
 # PATH
 PATH="${HOME}/.cargo/bin:${HOME}/go/bin:${HOME}/.local/bin:${PATH}"; export PATH;
 
 # EDITOR
 export EDITOR=/usr/bin/nvim
-
-# Launch gpg agent for SSH auth
-export GPG_TTY="$(tty)"
-export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
-gpgconf --launch gpg-agent
-gpg-connect-agent updatestartuptty /bye > /dev/null
-
 
 # the only way swearing really accomplishes anything
 eval $(thefuck --alias)
@@ -60,7 +42,11 @@ eval $(thefuck --alias)
 eval "$(jump shell)"
 
 # Fish-like autosuggestions
-source ~/.local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+if [[ "$OSTYPE" == "darwin"* ]]; then
+  source "$HOMEBREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
+else
+  source ~/.local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+fi
 
 # Direnv
 eval "$(direnv hook zsh)"
