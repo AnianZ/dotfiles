@@ -8,7 +8,7 @@
 # The following lines were added by compinstall
 
 zstyle ':completion:*' completer _complete _ignored
-zstyle :compinstall filename '/home/anian/.zshrc'
+zstyle :compinstall filename "$HOME/.zshrc"
 
 autoload -Uz compinit
 compinit
@@ -17,7 +17,7 @@ compinit
 # Shell history config
 HISTSIZE=100000
 SAVEHIST=$HISTSIZE
-HISTFILE=/home/anian/.zsh_history
+HISTFILE=$HOME/.zsh_history
 setopt HIST_IGNORE_ALL_DUPS  # do not put duplicated command into history list
 setopt HIST_SAVE_NO_DUPS  # do not save duplicated command
 setopt HIST_REDUCE_BLANKS  # remove unnecessary blanks
