@@ -20,5 +20,5 @@ require("lualine").setup({
 EOF
 
 set termguicolors
-colorscheme tokyonight-storm
+colorscheme tokyonight
 
