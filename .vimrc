@@ -16,10 +16,6 @@ Plugin 'editorconfig/editorconfig-vim'
 Plugin 'ctrlpvim/ctrlp.vim'
 " Git changes in a gutter on the left
 Plugin 'airblade/vim-gitgutter'
-" Simple statusline
-Plugin 'vim-airline/vim-airline'
-" Theme
-Plugin 'KeitaNakamura/neodark.vim'
 
 " Rainbow colors for csv
 Plugin 'mechatroner/rainbow_csv'
@@ -42,7 +38,8 @@ Plugin 'dpelle/vim-LanguageTool'
 " neovim orgmode plugins
 if has('nvim')
 	Plugin 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-	Plugin 'nvim-orgmode/orgmode'
+	Plugin 'folke/tokyonight.nvim'
+	Plugin 'nvim-lualine/lualine.nvim'
 endif
 
 call vundle#end()            " required
@@ -80,21 +77,12 @@ set incsearch   " show incremental search results as you type
 packloadall
 silent! helptags ALL
 
-" Enable airline powerline
-let g:airline_powerline_fonts = 1
-" Show the buffers as a tabline at the top
-let g:airline#extensions#tabline#enabled = 1
-
 " Set auto indet for orgmode
 let g:org_indent = 1
 let g:org_aggressive_conceal = 1
 let g:org_heading_shade_leading_stars = 1
 
 syntax enable
-
-colorscheme neodark
-" Use terminal background color
-let g:neodark#use_256color = 1
 
 " Set default spelling language
 set spelllang=en_GB
