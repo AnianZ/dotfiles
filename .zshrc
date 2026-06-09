@@ -33,7 +33,7 @@ bindkey "^[[B" down-line-or-search
 PATH="${HOME}/.cargo/bin:${HOME}/go/bin:${HOME}/.local/bin:${PATH}"; export PATH;
 
 # EDITOR
-export EDITOR=/usr/bin/nvim
+export EDITOR=nvim
 
 # the only way swearing really accomplishes anything
 eval $(thefuck --alias)
