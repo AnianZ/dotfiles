@@ -54,10 +54,6 @@ eval "$(direnv hook zsh)"
 # Starship promt
 eval "$(starship init zsh)"
 
-# Use the local podman socket for docker on fedora
-# https://fedoramagazine.org/use-docker-compose-with-podman-to-orchestrate-containers-on-fedora/
-export DOCKER_HOST=unix:/run/user/$UID/podman/podman.sock
-
 # Dotfile management
 alias dtfiles='git --git-dir=$HOME/.config/dotfiles --work-tree=$HOME'
 
@@ -72,3 +68,4 @@ alias clean-git="git remote prune origin && git branch --merged >/tmp/merged-bra
 
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /usr/local/bin/mcli mcli
+
