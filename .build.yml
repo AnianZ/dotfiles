@@ -1,0 +1,22 @@
+image: alpine/latest
+packages:
+  - git
+  - openssh-client
+
+secrets:
+  - e2476dec-15e6-4091-94da-a0b76941c130
+
+submitter:
+  git.sr.ht:
+    allow-refs:
+      - refs/heads/*
+      - refs/tags/*
+
+tasks:
+  - mirror-to-github: |
+      git clone --bare https://git.sr.ht/~anianz/dotfiles dotfiles.git
+      cd dotfiles.git
+      GIT_SSH_COMMAND='ssh -o StrictHostKeyChecking=accept-new' \
+        git push --prune git@github.com:AnianZ/dotfiles.git \
+        '+refs/heads/*:refs/heads/*' \
+        '+refs/tags/*:refs/tags/*'
